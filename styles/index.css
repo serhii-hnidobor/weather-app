@@ -1,0 +1,414 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v5.0.1 | 20191019
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section {
+  display: block;
+}
+/* HTML5 hidden-attribute fix for newer browsers */
+*[hidden] {
+  display: none;
+}
+menu,
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/*APP STYLES*/
+
+body {
+  background: linear-gradient(80deg, #000428, #004e92);
+  font-family: Poppins, Arial, sans-serif !important;
+  margin: 0;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.content-container {
+  display: block;
+  width: 100%;
+  height: calc(100vh - 80px);
+  margin: 0px auto;
+  padding: 20px;
+  background: url(https://the-weather-forecasting.netlify.app/static/media/bg.e0d46b6d28d5c7baa29c.png)
+    100% center repeat;
+
+  overflow-y: scroll;
+}
+
+.main-content__placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  text-align: center;
+  font-weight: 400;
+  font-size: 2.125rem;
+  color: rgba(255, 255, 255, 0.85);
+  font-family:
+    Poppins Arial,
+    Helvetica,
+    sans-serif;
+  max-width: 80%;
+  margin: 0 auto;
+  height: 85%;
+}
+
+.forecast__header {
+  margin: 0px 0px 0.8rem;
+  font-size: 1.5rem;
+  letter-spacing: 0em;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 600;
+  line-height: 1;
+  text-align: center;
+  font-family:
+    "Roboto Condensed" Arial,
+    Helvetica,
+    sans-serif;
+  text-transform: uppercase;
+}
+
+.astro-header {
+  margin: 0px 0px 32px;
+  font-size: 1.5rem;
+  letter-spacing: 0em;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 600;
+  line-height: 1;
+  text-align: center;
+  font-family:
+    "Roboto Condensed" Arial,
+    Helvetica,
+    sans-serif;
+  text-transform: uppercase;
+}
+
+.main-content {
+  display: flex;
+  flex-flow: wrap;
+  width: 100%;
+  height: 100%;
+}
+
+.main-content__header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.main-content-header__time {
+  margin: 0px;
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 0em;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1;
+  padding-right: 2px;
+  font-family:
+    Poppins Arial,
+    Helvetica,
+    sans-serif;
+}
+
+.forecast-item {
+  width: 100%;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(3, minmax(200px, 1fr));
+  grid-template-rows: repeat(2, 1fr);
+  box-sizing: border-box;
+  margin: 0px;
+  flex-direction: row;
+  flex-basis: 100%;
+  -webkit-box-flex: 0;
+  flex-grow: 0;
+  max-width: 100%;
+  padding: 10px 20px;
+  background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.05) 0%,
+      rgba(171, 203, 222, 0.05) 100%
+    )
+    0% 0%;
+  box-shadow:
+    rgba(0, 0, 0, 0.05) 0px 10px 15px -3px,
+    rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  border-radius: 8px;
+  letter-spacing: 0.00938em;
+  color: white;
+  font-family:
+    Poppins Arial,
+    Helvetica,
+    sans-serif;
+  line-height: 1;
+  height: 31px;
+}
+
+.forecast-item__info-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.forecast {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.main-content_weather-wrapper {
+  width: 100%;
+  min-height: 85%;
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#search-country {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+#search-country-autocomplete {
+  position: relative;
+}
+
+#search-country-autocomplete > div {
+  width: 100%;
+  position: absolute;
+  top: 50px;
+  z-index: 100;
+}
+
+#search-country-autocomplete > input {
+  width: 100%;
+}
+
+.astro-wrapper {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.astro-item {
+  min-width: 137px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.astro-item > h4 {
+  margin: 0px;
+  font-weight: 400;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1;
+  font-family:
+    "Roboto Condensed" Arial,
+    Helvetica,
+    sans-serif;
+}
+
+.astro-item > span {
+  font-family:
+    Poppins Arial,
+    Helvetica,
+    sans-serif;
+  font-weight: 600;
+  color: white;
+  line-height: 1;
+}
+
+.logo {
+  height: 16px;
+}
+
+input {
+  border: 1px solid transparent;
+  background-color: #f1f1f1;
+  padding: 10px;
+  font-size: 16px;
+}
+input[type="text"] {
+  background-color: #f1f1f1;
+  width: 100%;
+}
+button[type="submit"] {
+  background-color: DodgerBlue;
+  color: #fff;
+}
+.autocomplete-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  background-color: white;
+  height: 50px;
+  cursor: pointer;
+  padding: 10px 40px;
+}
+
+.autocomplete-item:hover {
+  background-color: #ccc;
+}
+
+.autocomplete-active {
+  background-color: DodgerBlue !important;
+  color: #ffffff;
+}
+
+@media screen and (min-width: 1110px) {
+  .main-content_weather-wrapper {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 900px) {
+  .content-container {
+    max-width: 1110px;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .content-container {
+    padding-left: 24px;
+    padding-right: 24px;
+    border-radius: 1rem;
+    box-shadow:
+      rgba(200, 200, 200, 0.3) 0px 1px 2px 0px,
+      rgba(200, 200, 200, 0.15) 0px 1px 3px 1px;
+  }
+
+  .logo {
+    height: 22px;
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "name": "weather-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "node build.js",
+    "start:dev": "cd dist && live-server",
+    "format": "pnpm exec prettier . --write"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@craftamap/esbuild-plugin-html": "^0.6.1",
+    "clean-css": "^5.3.2",
+    "esbuild": "^0.19.5",
+    "html-minifier-terser": "^7.2.0",
+    "live-server": "^1.2.2",
+    "prettier": "^3.0.3"
+  }
+}

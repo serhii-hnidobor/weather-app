@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather app</title>
+    <link rel="stylesheet" href="styles/index.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+  </head>
+
+  <body>
+    <main class="content-container">
+      <div class="main-content">
+        <header class="main-content__header">
+          <img alt="logo" src="/public/logo.png" class="logo" />
+          <h3 class="main-content-header__time"></h3>
+        </header>
+        <form autocomplete="off" data-autocomplete="true" id="search-country">
+          <div class="autocomplete" id="search-country-autocomplete">
+            <input type="text" name="Country" placeholder="Country" />
+            <div></div>
+          </div>
+        </form>
+        <div class="main-content_weather-wrapper"></div>
+      </div>
+    </main>
+    <script src="scripts/script.js" type="module"></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+    <script
+      async
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
+  </body>
+</html>
