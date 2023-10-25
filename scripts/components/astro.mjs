@@ -18,8 +18,6 @@ function astroItem(heder, value) {
 function astro(data) {
   const container = document.querySelector(".astro");
 
-  console.log(container, data);
-
   if (!container) {
     return;
   }
@@ -37,8 +35,6 @@ function astro(data) {
 
     wrapper.appendChild(astroItemEl);
   }
-
-  console.log(wrapper);
 
   container.appendChild(wrapper);
 }

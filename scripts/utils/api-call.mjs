@@ -26,15 +26,17 @@ async function apiCall(apiPath, method, queryObj, data) {
     },
     body: data ? JSON.stringify(data) : undefined,
   };
+  try {
+    const response = await fetch(requestUrl, requestOptions);
 
-  const response = await fetch(requestUrl, requestOptions);
+    if (!response?.ok) {
+      showError(response?.error);
+      return;
+    }
 
-  if (!response.ok) {
-    showError(response.error);
-    return;
+    return response.json();
+  } catch (error) {
+    showError(error);
   }
-
-  return response.json();
 }
-
 export default apiCall;

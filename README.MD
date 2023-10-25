@@ -21,9 +21,9 @@ To get this weather app up and running, follow these steps:
 
 1. **Open the Project Folder**:
 
-   \`\`\`bash
+   ```bash
    cd weather-app
-   \`\`\`
+   ```
 
 2. **Create an API Key**:
 
@@ -31,11 +31,11 @@ To get this weather app up and running, follow these steps:
 
 3. **Serve the App**:
 
-   \`\`\`bash
+   ```bash
     pnpm i
     pnpm run build
     pnpm run start
-   \`\`\`
+   ```
 
 5. **Search for Weather**:
 
